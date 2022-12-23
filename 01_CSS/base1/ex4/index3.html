@@ -27,18 +27,16 @@
         <p>
             Модули предлагают способ расширить программирование на Python. Вы можете создать свои модули, использовать те, которые поставляются с Python или которые написали другие. В самом Python есть сотни модулей, которые облегчают написание программ. Список модулей, поставляемых с Python, находится по адресу: <a href="https://pythonworld.ru/moduli" target="_blank"><i>https://pythonworld.ru/moduli</i></a>. Некоторые модули предназначены для определённых операционных систем, но большинство из них кроссплатформенные и работают одинаково на <a href="https://en.wikipedia.org/wiki/Linux" target="_blank">Linux</a>, <a href="https://en.wikipedia.org/wiki/MacOS" target="_blank">Mac</a> и <a href="https://en.wikipedia.org/wiki/Microsoft_Windows" target="_blank">Microsoft Windows</a>. Для использования внешнего модуля необходимо импортировать его в программу. Один из модулей, поставляемых с Python, называется &laquo;random&raquo;. Он даёт возможность генерировать псевдослучайные числа. Мы используем этот модуль в нашем первом примере. 
         </p>
-        <p>
-            <code>
-                #======================================= 
-                <br># random_example.py 
-                <br># Module example using the random module 
-                <br>#======================================= 
-                <br>import random 
-                <br># print 14 random integers 
-                <br>for cntr in range(1,15): 
-                <br>&nbsp; &nbsp; print random.randint(1,10)
-            </code>
-        </p>
+        <code>
+            #======================================= 
+            <br># random_example.py 
+            <br># Module example using the random module 
+            <br>#======================================= 
+            <br>import random 
+            <br># print 14 random integers 
+            <br>for cntr in range(1,15): 
+            <br>&nbsp; &nbsp; print random.randint(1,10)
+        </code>
         <p>
             Давайте разберём код по строкам. Первые четыре строки &mdash; это комментарии, о которых мы говорили в прошлый раз. Пятая строка говорит Python, что нужно использовать модуль &laquo;random&raquo;. Мы должны явно указать Python на это. 
         </p>
@@ -48,41 +46,37 @@
         <p>
             Когда мы импортировали модуль random, мы использовали функцию <strong>randint()</strong>. Функция &mdash; это блок кода, который создан для того, чтобы вызывать его в программе, обычно, более одного раза. Это упрощает работу над программой и предотвращает набор одного и того же кода снова и снова. Грубо говоря, если вам нужно написать некоторый код больше, чем 1-2 раза, стоит сделать его функцией. Хотя следующие два примера очень простые, это хорошие примеры функций. Теперь мы хотим, скажем, взять два числа, сложить их, перемножить, вычесть одно из другого, затем вывести на экран эти числа и результаты одновременно. Допустим, нам нужно сделать это три раза для трёх наборов чисел. Тогда наш пример будет выглядеть как код ниже.
         </p>
-        <p>
-            <code>
-                #silly example 
-                <br>print '%d + %d = %d ' % (1,2,1+2) 
-                <br>print '%d * %d = %d ' % (1,2,1*2) 
-                <br>print '%d - %d = %d ' % (1,2,1-2)
-                <br> 
-                <br>print '\n' 
-                <br>print '%d + %d = %d ' % (1,4,1+4) 
-                <br>print '%d * %d = %d ' % (1,4,1*4) 
-                <br>print '%d - %d = %d ' % (1,4,1-4) 
-                <br>
-                <br>print '\n' 
-                <br>print '%d + %d = %d ' % (10,5,10+5) 
-                <br>print '%d * %d = %d ' % (10,5,10*5) 
-                <br>print '%d - %d = %d ' % (10,5,10-5) 
-                <br>print '\n'
-            </code>
-        </p>
+        <code>
+            #silly example 
+            <br>print '%d + %d = %d ' % (1,2,1+2) 
+            <br>print '%d * %d = %d ' % (1,2,1*2) 
+            <br>print '%d - %d = %d ' % (1,2,1-2)
+            <br> 
+            <br>print '\n' 
+            <br>print '%d + %d = %d ' % (1,4,1+4) 
+            <br>print '%d * %d = %d ' % (1,4,1*4) 
+            <br>print '%d - %d = %d ' % (1,4,1-4) 
+            <br>
+            <br>print '\n' 
+            <br>print '%d + %d = %d ' % (10,5,10+5) 
+            <br>print '%d * %d = %d ' % (10,5,10*5) 
+            <br>print '%d - %d = %d ' % (10,5,10-5) 
+            <br>print '\n'
+        </code>
         <p>
             Здесь нужно не только набрать много текста, но и непременно возникнут ошибки как при написании, так и при внесении изменений. Вместо этого мы создадим функцию, которую назовём <cite><strong>&laquo;DoTwo&raquo;</strong></cite>. Она будет каждый раз брать два числа, проводить математические операции и выводить результат. Начнём с ключевого слова <cite><strong>&laquo;def&raquo;</strong></cite>, которое сигнализирует о том, что мы собираемся определить функцию. После слова <cite><strong>&laquo;def&raquo;</strong></cite> добавим название функции и список параметров, если таковые имеются, в круглых скобках. Эту строку необходимо завершить двоеточием. Код функции набирается с отступом. Наш улучшенный простой пример (<ins>&#8470;2</ins>) показан ниже.
         </p>
-        <p>
-            <code>
-                #silly example 2...still silly, but better 
-                <br>def DoTwo(num1,num2): 
-                <br>&nbsp; &nbsp; print '%d + %d = %d ' % (num1,num2,num1+num2) 
-                <br>&nbsp; &nbsp; print '%d * %d = %d ' % (num1,num2,num1*num2) 
-                <br>&nbsp; &nbsp; print '%d - %d = %d ' % (num1,num2,num1-num2) 
-                <br>&nbsp; &nbsp; print '\n' 
-                <br>DoTwo(1,2) 
-                <br>DoTwo(1,4) 
-                <br>DoTwo(10,5)
-            </code>
-        </p>
+        <code>
+            #silly example 2...still silly, but better 
+            <br>def DoTwo(num1,num2): 
+            <br>&nbsp; &nbsp; print '%d + %d = %d ' % (num1,num2,num1+num2) 
+            <br>&nbsp; &nbsp; print '%d * %d = %d ' % (num1,num2,num1*num2) 
+            <br>&nbsp; &nbsp; print '%d - %d = %d ' % (num1,num2,num1-num2) 
+            <br>&nbsp; &nbsp; print '\n' 
+            <br>DoTwo(1,2) 
+            <br>DoTwo(1,4) 
+            <br>DoTwo(10,5)
+        </code>
         <p>
             Как видите, здесь написано меньше кода &mdash; 8 строк вместо 12. Если нам нужно будет чтолибо поменять в функции, мы сможем сделать это, не создавая проблем для нашей программы. Чтобы вызвать функцию, нужно написать её имя и параметры.
         </p>
