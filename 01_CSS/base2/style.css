@@ -1,0 +1,15 @@
+body{
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#header{
+    text-align: right;
+}
+.text{
+    font-family: 'Bad Script', cursive;
+    text-indent:30px;
+}
+.text h3{
+    text-decoration: underline;
+}
