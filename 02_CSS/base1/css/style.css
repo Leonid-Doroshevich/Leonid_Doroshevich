@@ -1,0 +1,46 @@
+div{
+    background-image: url("../img/cards.png");
+    background-repeat: no-repeat;
+    height: 198px;
+    width: 142px;
+}
+#c1{
+    display: inline-block;
+}
+#c2{
+    position: absolute;
+}
+.card1{
+    background-position: 100% -1189px;
+}
+.card2{
+    background-position: 0px -1784px;
+}
+.card3{
+    background-position: -286px -1387px;
+}
+.card4{
+    background-position: -143px -2180px;
+}
+.card5{
+    background-position: -286px 100%;
+}
+.card6{
+    background-position: 100% -1189px;
+}
+.card7{
+    left: 100px;
+    background-position: 0px -1784px;
+}
+.card8{
+    left: 200px;
+    background-position: -286px -1387px;
+}
+.card9{
+    left: 300px;
+    background-position: -143px -2180px;
+}
+.card10{
+    left: 400px;
+    background-position: -286px 100%;
+}
