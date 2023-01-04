@@ -1,0 +1,21 @@
+ul{
+    width: 400px;
+    list-style-type: upper-roman;
+}
+li ul{
+    list-style-type: lower-roman;
+}
+div{
+    background-color: black;
+    color: green;
+    width: 350px;
+    overflow: auto;
+    text-overflow: ellipsis;
+    display: -moz-box;
+    display: -webkit-box;
+    line-clamp: 4;
+    box-orient: vertical;
+    -moz-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+}
