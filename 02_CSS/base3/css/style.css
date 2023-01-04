@@ -1,0 +1,16 @@
+.navi{
+    float: left;
+    background-color: bisque;
+    width: 15em;
+}
+.content{
+    overflow: auto;
+    margin-left: 15em;
+    background-color: aquamarine;
+    margin-bottom: 0.2em;
+}
+.bottom{
+    width: 100%;
+    clear: both;
+    background-color: beige;
+}
