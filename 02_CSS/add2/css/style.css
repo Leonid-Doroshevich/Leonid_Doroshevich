@@ -1,0 +1,21 @@
+body{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+.menu{
+    background-color: yellow;
+    flex-basis: 15em;
+}
+.content{
+    flex-basis: calc(100% - 15em);
+}
+.footer{
+    background-color: bisque;
+    flex-basis: 100%;
+}
+.content div{
+    overflow: auto;
+    background-color: aquamarine;
+    margin-bottom: 0.2em;
+}
