@@ -12,16 +12,16 @@
     border-style: solid;
     border-color: black;
     border-width: 3px;
-    flex-basis: 20%;
+    flex-basis: 100%;
     text-align: center;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
 }
 
 .day-down {
-    font-size: 16px;
     display: none;
+    font-size: 16px;
     background-color: aquamarine;
     padding: 10px;
     text-align: center;
@@ -34,6 +34,7 @@
 .day:hover {
     background-color: aquamarine;
     padding-bottom: 0;
+    height: 140px;
 }
 
 .day-down:hover {

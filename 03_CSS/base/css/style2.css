@@ -13,9 +13,11 @@ body{
     text-align: center;
     display: inline-block;
     position: relative;
+    margin: 0;
 }
-.dropdown_hover a{
+.dropdown_hover p{
     padding: 5px 0;
+    margin: 0;
 }
 .dropdown_hover{
     width: 150px;
@@ -33,6 +35,20 @@ body{
 .dropdown:hover .dropdown_hover{
     display: block;
 }
-.dropdown_hover a:hover{
+.dropdown_hover p:hover{
     background-color: gray;
+}
+@media all and (max-width: 955px){
+    .dropdown{
+        display: block;
+        margin-bottom: -3px;
+    }
+    .dropdown_hover{
+        left: 150px;
+        top: 0;
+    }
+    .dropdown:hover{
+        border-style: solid none solid solid;
+        padding: 5px 0;
+    }
 }

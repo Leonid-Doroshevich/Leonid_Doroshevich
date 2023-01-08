@@ -1,0 +1,64 @@
+.day{
+    width: 150px;
+    font-size: 20px;
+    padding: 5px 0;
+    background-color: rgb(106, 226, 233);
+    border-style: solid;
+    border-color: black;
+    border-width: 3px;
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    margin: 0 -5px 0 0;
+}
+.day-down{
+    margin:5px 0 0 0;
+    padding: 0;
+    width: 150px;
+    font-size: 16px;
+    /*display: none;*/
+    background-color: aquamarine;
+    text-align: center;
+    position: absolute;
+    list-style-type: none;
+    height: 0;
+    transition: none;
+}
+.day-down li{
+    opacity: 0;
+    padding: 0;
+    height: 0;
+    transition: none;
+}
+.day:hover{
+    background-color: aquamarine;
+    border-color: white;
+}
+.day:hover .day-down{
+    display: block;
+    height: 99px;
+    transition: 0.3s;
+}
+.day:hover .day-down li{
+    height: 23px;
+    padding: 5px 0;
+    opacity: 1;
+    z-index: 100;
+    transition: height 0.5s, opacity 0.5s;
+}
+.day-down li:hover{
+    background-color: gray;
+}
+@media all and (max-width: 1012px){
+    .day{
+        display: block;
+        margin: 0 0 -3px 0;
+    }
+    .day-down{
+        top: 0;
+        margin: 0;
+    }
+    .day:hover .day-down{
+        left: 150px;
+    }
+}
