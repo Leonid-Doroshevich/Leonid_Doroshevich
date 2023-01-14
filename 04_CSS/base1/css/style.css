@@ -1,0 +1,41 @@
+body{
+    width: 700px;
+}
+div{
+    border: 1px solid;
+    border-radius: 0 1em;
+    padding-bottom: 1em;
+}
+p{
+    text-indent: 1em;
+    margin: 0;
+
+}
+[href="#"]{
+    background-image: url(../img/doc.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left: 10px;
+
+}
+ul{
+    list-style-image: url(../img/doc1.jpeg);
+}
+#word:hover{
+    background-image: url(../img/word.jpeg);
+    background-repeat: no-repeat;
+    background-position: right center;
+    padding-right: 17px;
+}
+#pdf:hover{
+    background-image: url(../img/pdf.png);
+    background-repeat: no-repeat;
+    background-position: right center;
+    padding-right: 17px;
+}
+#zip:hover{
+    background-image: url(../img/zip.gif);
+    background-repeat: no-repeat;
+    background-position: right center;
+    padding-right: 17px;
+}

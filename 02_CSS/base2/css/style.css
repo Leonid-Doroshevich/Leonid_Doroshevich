@@ -1,9 +1,12 @@
 ul{
     width: 400px;
     list-style-type: upper-roman;
+    font-weight: bold;
 }
+
 li ul{
     list-style-type: lower-roman;
+    font-weight: normal;
 }
 div{
     background-color: black;
