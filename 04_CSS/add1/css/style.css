@@ -11,7 +11,7 @@ p{
     margin: 0;
 
 }
-[href="#"]::before{
+[href^="https://"]::before{
 content: url(..//img/doc.png);
 
 }
