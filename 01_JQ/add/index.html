@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        form {
+            width: 400px;
+        }
+        input{
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="" name="form">
+        <h2>Проверка пароля</h2>
+        <fieldset>
+            <input type="text" name="password" autocomplete="off">* Пароль<br>
+            <input type="text" name="r_password" autocomplete="off">* Повторите пароль<br>
+            <button>Отправить</button>
+        </fieldset>
+    </form>
+
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function ($) {
+            $('[name="r_password"]').on("keyup", function() {
+                var password = $('[name="password"]').val();
+                var r_password = $('[name="r_password"]').val();
+                if (password != r_password) {
+                    $('input').css('backgroundColor', 'red');
+
+                }
+                else {
+                    $('input').css('backgroundColor', 'green');
+                }
+            })
+        });
+    </script>
+</body>
+
+</html>
